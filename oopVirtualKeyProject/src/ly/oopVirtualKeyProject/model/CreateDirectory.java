@@ -10,20 +10,36 @@ public class CreateDirectory
 {
 	//The definition of the variable name of Directory is Static and Final.
 	
-	 public static final String name = "src/workplace/";
-	 // The definition of the variable files is ArrayList
+	 public static final String dir = "src/workplace/";
+	 
+	 // Create Object of Directory File
+	 
+	 
+	 // Create constructor of Create Directory if not exists.
+	 public CreateDirectory(){
+		 File directory  = new File(dir);
+		 if (! directory.exists()){
+		        directory.mkdir();
+		        // If you require it to make the entire directory path including parents,
+		        // use directory.mkdirs(); here instead.
+		    }
+	 }
+		// The definition of the variable files is ArrayList
 	 private ArrayList<File> files = new ArrayList<File>();
 	    
 	 // Create initial object pathFileName
-	    Path pathFileName = FileSystems.getDefault().getPath(name).toAbsolutePath();
+	    Path pathFileName = FileSystems.getDefault().getPath(dir).toAbsolutePath();
 	    
 	 // Create initial object File
 	    File DircOfFiles = pathFileName.toFile();
 	    
 	    // Create Setter of the variable of name   
 	    public String getName() {
-	        return name;
+	        return dir;
 	    }
+	    
+	   
+	   
 	    
 	    // Print file name from Directory.
 	    public void print() {

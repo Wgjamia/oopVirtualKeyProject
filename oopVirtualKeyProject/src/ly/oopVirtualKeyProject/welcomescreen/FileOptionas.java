@@ -84,7 +84,7 @@ public class FileOptionas implements Screens
         System.out.println("You are adding a file named: " + fileName);
         
 		try {
-			Path path = FileSystems.getDefault().getPath(CreateDirectory.name + fileName).toAbsolutePath();
+			Path path = FileSystems.getDefault().getPath(CreateDirectory.dir + fileName).toAbsolutePath();
 			File file = new File(ls.getName() + fileName);
 			
 		      if (file.createNewFile()) {
@@ -111,7 +111,7 @@ public class FileOptionas implements Screens
         
         
 	     
-		Path path = FileSystems.getDefault().getPath(CreateDirectory.name + fileName).toAbsolutePath();
+		Path path = FileSystems.getDefault().getPath(CreateDirectory.dir + fileName).toAbsolutePath();
 		File file = path.toFile();
 	      if (file.delete()) {
 	    	  System.out.println("Deleted File: " + file.getName());
