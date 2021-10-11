@@ -88,11 +88,11 @@ public class FileOptionas implements Screens
 			File file = new File(ls.getName() + fileName);
 			
 		      if (file.createNewFile()) {
-		    	  System.out.println("File created: " + file.getName());
+		    	  System.out.println("The Filename has been created: " + file.getName());
 		    	  ls.getFiles().add(file);
 		    	  
 		      } else {
-		        System.out.println("This File Already Exits, no need to add another");
+		        System.out.println("This Filename Already Exits!!!");
 		      }
 		}catch (IOException e){
 			System.out.println(e);
@@ -114,7 +114,7 @@ public class FileOptionas implements Screens
 		Path path = FileSystems.getDefault().getPath(CreateDirectory.dir + fileName).toAbsolutePath();
 		File file = path.toFile();
 	      if (file.delete()) {
-	    	  System.out.println("Deleted File: " + file.getName());
+	    	  System.out.println("The Filename has been Deleted: " + file.getName());
 	    	  ls.getFiles().remove(file);
 	      } else {
 	        System.out.println("Failed to delete file:" + fileName + ", file was not found.");
@@ -138,12 +138,12 @@ public class FileOptionas implements Screens
         
         for(int i = 0; i < files.size(); i++) {
 			if(files.get(i).getName().equals(fileName)) {
-				System.out.println("Found " + fileName);
+				System.out.println("The Filename has been Found : " + fileName);
 				found = true;
 			}
         }
         if (found == false) {
-        	System.out.println("File not found");
+        	System.out.println("The File name has been not found !!!");
         }
     }
     
