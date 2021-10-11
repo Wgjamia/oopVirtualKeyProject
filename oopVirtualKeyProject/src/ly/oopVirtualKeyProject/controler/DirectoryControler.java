@@ -1,6 +1,10 @@
 package ly.oopVirtualKeyProject.controler;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import ly.oopVirtualKeyProject.model.*;
 
@@ -15,10 +19,13 @@ public class DirectoryControler {
     public static void PrintFiles() {
     	
     	fileDirectory.fillFiles();
-
+    	 DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy - hh:mm:ss");
+    	
         for (File file : DirectoryControler.getFileDirectory().getFiles())
         {
-            System.out.println(file.getName());
+        	
+
+            System.out.println(file.getAbsolutePath()+" || "+ dateFormat.format(file.lastModified())+" || "+file.length());
         }
     }
     // Create Method to get Directory of File.
