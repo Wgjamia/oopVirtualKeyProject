@@ -12,7 +12,7 @@ public class WelcomeScreen implements Screens
 {
 
 	// Create Variable of Welcome Main Menu.
-    private String welcomeMainMenu = " || ========> Welcome to the project Virtual Key <======== ||";
+    private String welcomeMainMenu = "=============> Welcome to the project Virtual Key <===========";
     
     // Create Variable of Owner of Project.
     private String developerName = "================>> Developer: Wesam Alghjamia <<================";
@@ -32,18 +32,18 @@ public class WelcomeScreen implements Screens
     	System.out.println(welcomeMainMenu);
         System.out.println(developerName);
         System.out.println("\n");
-        System.out.println("<<=============================================================================>>");
-        System.out.println("\n");
         ShowSecreen();
     }
     
     // Override the method of Show Screen.
 	@Override
 	public void ShowSecreen() {
+	
 		System.out.println("Main Menu");
         for (String s : options)  {
             System.out.println(s);
         }
+        
 	}
 	// Override the method of Navigate Option.
 	@Override
@@ -52,7 +52,7 @@ public class WelcomeScreen implements Screens
 
           case 1: // Show Files in Directory
               this.ShowFiles();
-              
+           
               this.ShowSecreen();
               
               break;
