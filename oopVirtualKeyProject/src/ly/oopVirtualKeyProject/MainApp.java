@@ -10,7 +10,7 @@ public class MainApp {
 		WelcomeScreen welcome = new WelcomeScreen();
 		// call method print of Main Menu from Class WelcomeScreen
     	welcome.printSoftD();
-    	// call method get User Input of Main Menu from Class WelcomeScreen
+    	// call method get User Input1 of Main Menu from Class WelcomeScreen
     	welcome.GetUserInput();
 	}
 
