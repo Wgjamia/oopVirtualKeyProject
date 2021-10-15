@@ -65,6 +65,9 @@ public class WelcomeScreen implements Screens
         	  ScreenControler.getCurrentScreen().GetUserInput();
               this.ShowSecreen();
               break;
+          case 3: // close of the program.
+        	  System.out.println("Thank you for your cooperation, good bye....");
+        	  System.exit(0);
               
           default:
               System.out.println("Invalid Option");
@@ -75,7 +78,7 @@ public class WelcomeScreen implements Screens
 	@Override
 	public void GetUserInput() {
 		   int selectedOption  = 0;
-	        while ((selectedOption = this.getOption()) != 3) {
+	        while ((selectedOption = this.getOption()) != 4) {
 	            this.NavigateOption(selectedOption);
 	        }
 	}
