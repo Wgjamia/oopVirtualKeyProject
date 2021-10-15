@@ -29,8 +29,10 @@ public class WelcomeScreen implements Screens
     
     // Create method of print initial of Welcome Main Menu.
     public void printSoftD() {
+    	System.out.println("\n");
     	System.out.println(welcomeMainMenu);
-        System.out.println(developerName);
+    	System.out.println("\n");
+    	System.out.println(developerName);
         System.out.println("\n");
         ShowSecreen();
     }
@@ -38,7 +40,7 @@ public class WelcomeScreen implements Screens
     // Override the method of Show Screen.
 	@Override
 	public void ShowSecreen() {
-	
+		System.out.println();
 		System.out.println("Main Menu");
         for (String s : options)  {
             System.out.println(s);
@@ -80,8 +82,12 @@ public class WelcomeScreen implements Screens
 	
 	// Create method of show files.
 	  public void ShowFiles() {
-	        System.out.println("List of Files: ");
-	    	DirectoryControler.PrintFiles();
+		  System.out.println("\n");
+	      System.out.println("List of Files: ");
+	      System.out.println("\n");
+	      DirectoryControler.PrintFiles();
+	      System.out.println("\n");
+	      System.out.println("=============================================================");
 	    }
 	    
 	  // Create method to get Option.

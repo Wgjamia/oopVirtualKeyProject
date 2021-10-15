@@ -19,6 +19,8 @@ public class FileOptionas implements Screens
 	
 	// Create and initial values of construct
     public FileOptionas() {
+    	System.out.print("===================================================");
+    	System.out.println();
     	options.add("1. Add a File");
         options.add("2. Delete A File");
         options.add("3. Search A File");
@@ -28,6 +30,7 @@ public class FileOptionas implements Screens
     //Override the method Show Screen of Menu.
 	@Override
 	public void ShowSecreen() {
+		System.out.println();
 	   	System.out.println("File Options Menu");
         for (String s : options) {
             System.out.println(s);
