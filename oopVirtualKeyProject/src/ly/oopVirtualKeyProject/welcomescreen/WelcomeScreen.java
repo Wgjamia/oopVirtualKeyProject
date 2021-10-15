@@ -61,9 +61,7 @@ public class WelcomeScreen implements Screens
         	  ScreenControler.setCurrentScreen(ScreenControler.FileOptionsScreen);
         	  ScreenControler.getCurrentScreen().ShowSecreen();
         	  ScreenControler.getCurrentScreen().GetUserInput();
-              
               this.ShowSecreen();
-              
               break;
               
           default:
@@ -82,18 +80,14 @@ public class WelcomeScreen implements Screens
 	
 	// Create method of show files.
 	  public void ShowFiles() {
-
-
 	        System.out.println("List of Files: ");
 	    	DirectoryControler.PrintFiles();
-
 	    }
 	    
 	  // Create method to get Option.
 	  
 	    private int getOption() {
 	        Scanner in = new Scanner(System.in);
-
 	        int returnOption = 0;
 	        try {
 	            returnOption = in.nextInt();
@@ -102,8 +96,5 @@ public class WelcomeScreen implements Screens
 
 	        }
 	        return returnOption;
-
 	    }
-	
-
 }

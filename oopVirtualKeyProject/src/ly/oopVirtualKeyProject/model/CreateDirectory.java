@@ -9,22 +9,17 @@ import java.util.Collections;
 public class CreateDirectory 
 {
 	//The definition of the variable name of Directory is Static and Final.
-	
-	 public static final String dir = "src/workplace/";
-	 
-	 // Create Object of Directory File
-	 
+	public static final String dir = "src/workplace/";
 	 
 	 // Create constructor of Create Directory if not exists.
 	 public CreateDirectory(){
 		 File directory  = new File(dir);
+		// If the folder does not exist, it will be created.
 		 if (! directory.exists()){
 		        directory.mkdir();
-		        // If you require it to make the entire directory path including parents,
-		        // use directory.mkdirs(); here instead.
 		    }
 	 }
-		// The definition of the variable files is ArrayList
+	// The definition of the object variable files is ArrayList
 	 private ArrayList<File> files = new ArrayList<File>();
 	    
 	 // Create initial object pathFileName
@@ -36,11 +31,7 @@ public class CreateDirectory
 	    // Create Setter of the variable of name   
 	    public String getName() {
 	        return dir;
-	    }
-	    
-	   
-	   
-	    
+	    }	    
 	    // Print file name from Directory.
 	    public void print() {
 	    	System.out.println("Existing Files: ");
@@ -48,25 +39,18 @@ public class CreateDirectory
 	    }
 	    // Create the method to fill and return an ArrayList of files..
 	    public ArrayList<File> fillFiles() {
-	    	
-	        File[] directoryFiles = DircOfFiles.listFiles();
-	        
-	        
-	        
-	    	files.clear();
+	    	File[] directoryFiles = DircOfFiles.listFiles();
+	        files.clear();
 	    	for (int i = 0; i < directoryFiles.length; i++) {
 	    		if (directoryFiles[i].isFile()) {
 	    			files.add(directoryFiles[i]);
 	    		}
 	    	}
-	    	
 	    	Collections.sort(files);
-	    	
 	    	return files;
 	    }
 	    // Create Method to get files As ArrayList.
 	    public ArrayList<File> getFiles() {
-	    	
 	    	fillFiles();
 	    	return files;
 	    }

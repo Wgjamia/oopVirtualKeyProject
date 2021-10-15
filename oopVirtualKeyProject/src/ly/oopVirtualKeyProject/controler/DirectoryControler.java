@@ -15,17 +15,17 @@ public class DirectoryControler {
 	// Create private and static Object of fileDirectory 
     private static CreateDirectory fileDirectory = new CreateDirectory();
     
-    // Create method for print file name.
+    // Create method for print file name, lastModified Date and Size of file.
     public static void PrintFiles() {
     	
     	fileDirectory.fillFiles();
-    	 DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy - hh:mm:ss");
+    	
+    	//Create Object of Format Date
+    	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy - hh:mm:ss");
     	
         for (File file : DirectoryControler.getFileDirectory().getFiles())
         {
-        	
-
-            System.out.println(file.getAbsolutePath()+" || "+ dateFormat.format(file.lastModified())+" || "+file.length());
+        	System.out.println(file.getAbsolutePath()+" || "+ dateFormat.format(file.lastModified())+" || "+file.length());
         }
     }
     // Create Method to get Directory of File.

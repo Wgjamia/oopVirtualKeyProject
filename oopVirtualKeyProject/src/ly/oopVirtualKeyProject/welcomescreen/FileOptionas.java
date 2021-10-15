@@ -19,12 +19,10 @@ public class FileOptionas implements Screens
 	
 	// Create and initial values of construct
     public FileOptionas() {
-    	
     	options.add("1. Add a File");
         options.add("2. Delete A File");
         options.add("3. Search A File");
         options.add("4. Return to Menu");
-        
     }
 
     //Override the method Show Screen of Menu.
@@ -39,7 +37,8 @@ public class FileOptionas implements Screens
 	// Override the method Navigate Option.
 	@Override
 	public void NavigateOption(int option) {
-	 	switch(option) {
+	 	
+		switch(option) {
 
         case 1: // Add File
             this.AddFile();
@@ -59,10 +58,7 @@ public class FileOptionas implements Screens
         default:
             System.out.println("Invalid Option");
             break;
-            
-            
-    }
-		
+            }		
 	}
 
 	// Override Method Get User Input.
@@ -98,8 +94,6 @@ public class FileOptionas implements Screens
 			System.out.println(e);
 		}
 	}
-        
-    
     //Create Method for deletions of files.
     public void DeleteFile() {
     	
@@ -108,10 +102,8 @@ public class FileOptionas implements Screens
         String fileName = this.getInputString();
 
         System.out.println("You are deleting a file named: " + fileName);
-        
-        
-	     
-		Path path = FileSystems.getDefault().getPath(CreateDirectory.dir + fileName).toAbsolutePath();
+
+        Path path = FileSystems.getDefault().getPath(CreateDirectory.dir + fileName).toAbsolutePath();
 		File file = path.toFile();
 	      if (file.delete()) {
 	    	  System.out.println("The Filename has been Deleted: " + file.getName());
@@ -132,9 +124,7 @@ public class FileOptionas implements Screens
 
         System.out.println("You are searching for a file named: " + fileName);
         
-      
         ArrayList<File> files = ls.getFiles();
-        
         
         for(int i = 0; i < files.size(); i++) {
 			if(files.get(i).getName().equals(fileName)) {
@@ -152,7 +142,6 @@ public class FileOptionas implements Screens
 
         Scanner in = new Scanner(System.in);
         return(in.nextLine());
-
     }
     //Create Private Method to get Option.
     private int getOption() {
